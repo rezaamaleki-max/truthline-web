@@ -2,6 +2,12 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.env
+*.log
+.git/
+.github/
 web_app/data/participants_web.db
-logs/
+web_app/data/*.db-journal
+web_app/data/*.db-wal
 reports/
+logs/

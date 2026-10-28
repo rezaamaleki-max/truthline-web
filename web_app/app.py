@@ -401,7 +401,10 @@ if __name__ in {'__main__', '__mp_main__'}:
             port=8080,
             reload=False,
             show=False,
-            storage_secret='truthline-research-secret-2024',
+            storage_secret=os.environ.get(
+                'STORAGE_SECRET',
+                'truthline-research-secret-2024'
+            ),
         )
     except KeyboardInterrupt:
         print('\n✅ سرور با موفقیت متوقف شد.')

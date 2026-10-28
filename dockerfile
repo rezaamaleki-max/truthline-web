@@ -4,19 +4,20 @@ ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     LANG=C.UTF-8
 
+# ✅ تنظیم میرور چابکان برای pip
+ENV PIP_INDEX_URL=https://mirror2.chabokan.net/pypi/simple/
+ENV PIP_TRUSTED_HOST=mirror2.chabokan.net
+
 WORKDIR /app
 
-# وابستگی‌های سیستمی برای PDF فارسی
+# وابستگی‌های سیستمی برای PDF فارسی + curl برای healthCheck
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libfreetype6 libjpeg62-turbo libpng16-16 \
+    libfreetype6 libjpeg62-turbo libpng16-16 curl \
     && rm -rf /var/lib/apt/lists/*
 
-# نصب پکیج‌ها از میرور لیارا
+# نصب پکیج‌ها از میرور چابکان (به‌طور خودکار از PIP_INDEX_URL استفاده می‌کند)
 COPY requirements.txt .
-RUN pip install --no-cache-dir \
-    --index-url https://package-mirror.liara.ir/repository/pypi/simple \
-    --trusted-host package-mirror.liara.ir \
-    -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # کپی پروژه
 COPY . .

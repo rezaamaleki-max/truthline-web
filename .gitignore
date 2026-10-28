@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+web_app/data/participants_web.db
+web_app/data/*.db-journal
+web_app/data/*.db-wal
+data/backups/
+logs/
+reports/
+.liara/

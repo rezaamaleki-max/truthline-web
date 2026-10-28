@@ -1,0 +1,22 @@
+"""ثبت همه‌ی صفحات وب‌اپ"""
+from web_app.pages import admin          # noqa: F401
+from web_app.pages import index          # noqa: F401
+from web_app.pages import demographic    # noqa: F401
+from web_app.pages import intro          # noqa: F401
+from web_app.pages import phase1         # noqa: F401
+from web_app.pages import phase2         # noqa: F401
+from web_app.pages import phase3         # noqa: F401
+from web_app.pages import phase4         # noqa: F401
+from web_app.pages import night          # noqa: F401
+from web_app.pages import interlude      # noqa: F401
+from web_app.pages import hexaco         # noqa: F401
+from web_app.pages import crt            # noqa: F401
+from web_app.pages import tower_of_hanoi # noqa: F401 
+from web_app.pages import sd3            # noqa: F401
+from web_app.pages import sd             # noqa: F401
+from web_app.pages import feedback       # noqa: F401
+from web_app.pages import results        # noqa: F401
+from web_app.pages import thank_you      # noqa: F401
+from web_app.pages import dev_panel      # noqa: F401
+from web_app.pages import letter_to_self # noqa: F401  
+from web_app.pages import download_report # noqa: F401

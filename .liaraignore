@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+web_app/data/participants_web.db
+logs/
+reports/

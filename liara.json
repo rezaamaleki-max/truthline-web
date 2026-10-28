@@ -12,7 +12,7 @@
     "interval": 30000,
     "timeout": 10000,
     "retries": 3,
-    "startPeriod": 10000
+    "startPeriod": 3000
   },
   "disks": [
     {

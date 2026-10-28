@@ -2,18 +2,6 @@
   "app": "truthline-web",
   "port": 8080,
   "platform": "docker",
-  "healthCheck": {
-    "command": [
-      "CMD",
-      "curl",
-      "--fail",
-      "http://localhost:8080"
-    ],
-    "interval": 30000,
-    "timeout": 15000,
-    "retries": 3,
-    "startPeriod": 10000
-  },
   "disks": [
     {
       "name": "data",
